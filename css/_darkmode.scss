@@ -1,0 +1,28 @@
+.theme-switcher {
+    display: none;
+    &:checked {
+        ~ {
+            .darkmode {
+                background-color: $background-color_2;
+                color: $color_1;
+                header {
+                    background-color: $background-color_2;
+                    .intro {
+                        color: $color_1;
+                    }
+                }
+                .Time,
+                .Onto,
+                .Nocode,
+                .avis {
+                    background-color: rgba(169, 169, 169, 0.5);
+                }
+                .burger-menu {
+                    color: $color_1;
+                }
+               
+            }
+
+        }
+    }
+}

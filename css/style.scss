@@ -1,0 +1,228 @@
+@import 'config.scss';
+@import 'darkmode.scss';
+
+body{
+    font-family: $font-family_1;
+}
+
+header {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-color_6;
+    border-bottom: 2px solid $color_2;
+    padding: 0 1em;
+    nav {
+        position: absolute;
+        top: 2%;
+        right: 5%;
+        display: none;
+        padding: 20px;
+        flex: 6;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            li {
+                a {
+                    text-decoration: none;
+                    color: $color_2;
+
+                }
+            }
+        }
+    }
+    #burger-toggle {
+        display: none;
+        &:checked~nav {
+            display: flex;
+
+        }
+    }
+}
+
+main {
+    .intro {
+        p {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    }
+    .Time,
+    .Onto,
+    .Nocode,
+    .avis {
+        padding: 5%;
+        margin: 2%;
+        background-color: $background-color_4;
+        img {
+            width: 100%;
+        }
+    }
+    .Onto {
+        img {
+            border-radius: 2em;
+        }
+    }
+    .galerie {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 24px;
+        margin-top: 1em;
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            position: relative;
+            border-radius: 1em;
+            margin: 1%;
+            &:nth-child(3n + 2) {
+                transform: translateY(10%);
+            }
+        }
+    }
+}
+
+
+
+.slideshow-container {
+    position: relative;
+    width: 40%;
+    left: 28%;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.main-image {
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+}
+
+#caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $background-color_11;
+    color: $color_1;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    font-size: 30px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 15px;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: $color_2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: $background-color_12;
+    &:hover {
+        background-color: $background-color_13;
+    }
+}
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: $color_2;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: $background-color_12;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    &:hover {
+        background-color: $background-color_13;
+    }
+}
+
+.champion-text {
+    padding: 20px;
+    background-color: $background-color_14;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 800px) {
+    .article {
+        display: flex;
+        flex-wrap: wrap;
+        article {
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 759px) {
+    .prev {
+        top: 30%;
+    }
+    .next {
+        top: 30%;
+    }
+    .champion-text {
+        width: 242%;
+        position: relative;
+        right: 80%;
+    }
+    .intro{
+        padding-bottom: 15%;
+    }
+    i {
+        position: relative;
+        top: 75px;
+    }
+    nav {
+        top: 16%;
+    }
+}

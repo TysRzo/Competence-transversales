@@ -1,0 +1,239 @@
+.theme-switcher {
+  display: none;
+}
+.theme-switcher:checked ~ .darkmode {
+  background-color: #333333;
+  color: white;
+}
+.theme-switcher:checked ~ .darkmode header {
+  background-color: #333333;
+}
+.theme-switcher:checked ~ .darkmode header .intro {
+  color: white;
+}
+.theme-switcher:checked ~ .darkmode .Time,
+.theme-switcher:checked ~ .darkmode .Onto,
+.theme-switcher:checked ~ .darkmode .Nocode,
+.theme-switcher:checked ~ .darkmode .avis {
+  background-color: rgba(169, 169, 169, 0.5);
+}
+.theme-switcher:checked ~ .darkmode .burger-menu {
+  color: white;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-bottom: 2px solid black;
+  padding: 0 1em;
+}
+header nav {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  display: none;
+  padding: 20px;
+  flex: 6;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header #burger-toggle {
+  display: none;
+}
+header #burger-toggle:checked ~ nav {
+  display: flex;
+}
+
+main .intro p {
+  text-align: center;
+}
+main .intro h1 {
+  text-align: center;
+}
+main .Time,
+main .Onto,
+main .Nocode,
+main .avis {
+  padding: 5%;
+  margin: 2%;
+  background-color: rgba(239, 239, 239, 0.8);
+}
+main .Time img,
+main .Onto img,
+main .Nocode img,
+main .avis img {
+  width: 100%;
+}
+main .Onto img {
+  border-radius: 2em;
+}
+main .galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 24px;
+  margin-top: 1em;
+}
+main .galerie img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 1em;
+  margin: 1%;
+}
+main .galerie img:nth-child(3n+2) {
+  transform: translateY(10%);
+}
+
+.slideshow-container {
+  position: relative;
+  width: 40%;
+  left: 28%;
+}
+
+.main-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.main-image {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  font-size: 30px;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 15px;
+}
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(253, 253, 253, 0.5);
+}
+.prev:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(253, 253, 253, 0.5);
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.champion-text {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  font-size: 30px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  .article {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .article article {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 759px) {
+  .prev {
+    top: 30%;
+  }
+  .next {
+    top: 30%;
+  }
+  .champion-text {
+    width: 242%;
+    position: relative;
+    right: 80%;
+  }
+  .intro {
+    padding-bottom: 15%;
+  }
+  i {
+    position: relative;
+    top: 75px;
+  }
+  nav {
+    top: 16%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
